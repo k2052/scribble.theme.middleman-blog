@@ -1,0 +1,30 @@
+link href='/images/fav.png' rel='shortcut icon'
+link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'
+
+link href='/stylesheets/style.css' rel='stylesheet' type='text/css'
+
+meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'
+meta content='text/html; charset=utf-8' http-equiv='content-type'
+meta content="/images/og.png" property="og:image"
+
+meta content==data['site'].facebook_appid property="fb:app_id"
+
+- if @data.date
+  meta content=@data.url property='og:url'
+  meta content=@data.summary(120) property='og:description'
+  meta content="article" property="og:type"
+- else
+  meta content=data['site'].url property='og:url'
+  meta content=data['site'].description property='og:description'
+  meta content="blog" property="og:type"
+
+== partial 'includes/ga'
+
+javascript:
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=604714799556697";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));

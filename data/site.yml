@@ -1,0 +1,23 @@
+title:            Scribble
+subtitle:         Scribbly
+description:      A jekyll theme. Because I scribble.
+name:             Scribble blog
+url:              # Site url.
+signoff:          # Your name.
+disqus_shortname: # Disqus comment thread for post header options. 
+facebook_appid:   # appid for like button, remove from /includes/_share.slim if unwanted.
+google_analytics: # set tracking, remove from /includes/_ga.slim if unwanted.
+
+links:
+  - name:         About
+    url:          /about
+  - name:         Blog
+    url:          /
+  - name:         Email
+    url:          mailto:k@2052.me
+    external:     true
+  - name:         GitHub
+    url:          http://github.com/k2052
+    external:     true
+  - name:         RSS
+    url:          /feed.xml

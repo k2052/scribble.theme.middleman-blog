@@ -1,0 +1,13 @@
+- @data = current_page.data
+
+html
+  head
+    meta content=@data.title property='og:title' 
+    title==@data.title
+    == partial 'includes/head'
+  body
+	  == partial 'includes/header'
+	  #container
+		  == partial 'includes/links'
+		  .content== yield
+	  == partial 'includes/footer'

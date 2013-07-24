@@ -1,0 +1,8 @@
+.content
+	ul.posts
+	  - blog.articles.each do |article|
+	    li
+	      small class="datetime muted" data-time=article.date
+	        == article.date.strftime('%b %e %Y')
+	      a href=article.url
+	        == article.title 

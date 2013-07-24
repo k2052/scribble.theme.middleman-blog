@@ -1,0 +1,15 @@
+article.content
+  section.post
+    h1.upcase
+      .date ==article.date.to_s
+      == article.title
+      
+    .body== article.body
+
+    .signoff== partial 'includes/signoff', {:locals =>{:article => article}}
+
+- if data['share']
+  == partial 'includes/share'
+
+- if data['disqus']
+  == partial 'includes/disqus'
