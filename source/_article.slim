@@ -1,15 +1,24 @@
-article.content
-  section.post
-    h1.upcase
-      .date ==article.date.to_s
-      == article.title
-      
-    .body== article.body
+.row
+  article.content.large-12.columns
+    h1.upcase.article-title
+      div== article.title
+    section.article
+      .article-body== article.body
 
-    .signoff== partial 'includes/signoff', {:locals =>{:article => article}}
+    section.meta
+      .row.published
+        .published-label Published:
+        h6.datetime data-time=article.date 
+          == article.date.strftime('%b %e %Y') 
 
-- if data['share']
-  == partial 'includes/share'
-
-- if data['disqus']
-  == partial 'includes/disqus'
+      - if article.tags.count > 0
+        .row.tags-wrap
+          .tags-label tags: 
+          ul.tags
+            - article.tags.each do |tag|
+              li
+                h6= tag
+      .row 
+        p 
+          em Comments? 
+          span via twitter <a href="http://twitter.com/k_2052">@k_2052</a> or email <a href="mailto:k@2052.me">k@2052.me</a>. 

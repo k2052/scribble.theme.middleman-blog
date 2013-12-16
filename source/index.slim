@@ -1,8 +1,8 @@
-.content
-	ul.posts
-	  - blog.articles.each do |article|
-	    li
-	      small class="datetime muted" data-time=article.date
-	        == article.date.strftime('%b %e %Y')
-	      a href=article.url
-	        == article.title 
+.row
+	h1.words-heading Words in a (possibly) useful order;
+	.content.articles-list.large-12.columns
+		ul.articles
+		  - @articles.each do |article|
+		    li
+		      small.datetime.muted data-time=article['date'] == article['date'].strftime('%b %e %Y')
+		      a href=article['url'] == article['title'] 

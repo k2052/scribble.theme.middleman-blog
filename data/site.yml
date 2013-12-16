@@ -1,12 +1,12 @@
-title:            Scribble
-subtitle:         Scribbly
-description:      A jekyll theme. Because I scribble.
-name:             Scribble blog
-url:              # Site url.
-signoff:          # Your name.
-disqus_shortname: # Disqus comment thread for post header options. 
-facebook_appid:   # appid for like button, remove from /includes/_share.slim if unwanted.
-google_analytics: # set tracking, remove from /includes/_ga.slim if unwanted.
+title: Words Assembled by K-2052
+description: "All the words and writings of K-2052. K-2502 is a; developer, designer, writer and human."
+url: "https://words.k2052.me"
+twitter: k_2052
+author: K-2052
+google_analytics: 
+og_image: 'images/logo@2x.png'
+og_image_width:  "377px"
+og_image_height: "263px"
 
 links:
   - name:         About
